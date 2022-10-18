@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    // Boolean flags
+    "pretty": true,
+    "sourceMap": true,
+    "importHelpers": true,
+    "removeComments": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "noUnusedParameters": true,
+    "allowUnreachableCode": false,
+    "experimentalDecorators": true,
+    "noUncheckedIndexedAccess": true,
+    "forceConsistentCasingInFileNames": true,
+
+    // Other
+    "baseUrl": ".",
+    "jsx": "preserve",
+    "lib": ["ESNext", "DOM"],
+    "types": [
+      "@types/node",
+      "@nuxt/types",
+      "@testing-library/dom",
+      "@testing-library/vue",
+      "@types/dotenv-safe",
+      "unplugin-icons/types/vue3",
+      "vite/client",
+      "vitest/globals",
+      ".nuxt"
+    ],
+    "paths": {
+      "blocks/*": ["./components/blocks/*"],
+      "composables/*": ["./composables/*"],
+      "elements/*": ["./components/elements/*"],
+      "layouts/*": ["./layouts/*"],
+      "lib/*": ["./lib/*"],
+      "pages/*": ["./pages/*"],
+      "root/*": ["./*"]
+    }
+  },
+  "exclude": ["node_modules"],
+  // https://v3.nuxtjs.org/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json"
+}
